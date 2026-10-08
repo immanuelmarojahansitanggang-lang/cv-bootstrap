@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Immanuel Marojahan Sitanggang – AI Engineer</title>
+<meta name="description" content="CV online Immanuel Marojahan Sitanggang, mahasiswa Sistem Informasi dengan target posisi AI Engineer.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%23c8102e'/%3E%3Cpath d='M15 12h18v5h-6.5v14H33v5H15v-5h6.5V17H15z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10192b; --paper:#f3f5f9; --card:#ffffff; --line:#d9e0ea; --muted:#5a6679;
+  --accent:#c8102e; --navy:#14203f; --sun:#ffc83d;
+  --bs-body-font-family:'Instrument Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --bs-body-bg:var(--paper); --bs-body-color:var(--ink);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#e8edf6; --paper:#0c1222; --card:#141c32; --line:#26324d; --muted:#9aa6bd; --accent:#ff6b7d;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#e8edf6; --paper:#0c1222; --card:#141c32; --line:#26324d; --muted:#9aa6bd; --accent:#ff6b7d;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-size:1.02rem;line-height:1.65;min-height:100vh;display:flex;flex-direction:column}
+h1,h2,h3,h4,h5,.display-font{font-family:'Bricolage Grotesque','Instrument Sans',system-ui,sans-serif;letter-spacing:-.02em;line-height:1.1}
+a{color:var(--accent)}
+.text-muted-2{color:var(--muted)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+
+/* Navbar */
+.site-nav{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:30}
+.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;color:var(--ink);font-family:'Bricolage Grotesque',sans-serif;font-weight:700}
+.brand svg{width:40px;height:40px;flex:none}
+.nav-link{color:var(--ink);font-weight:500;border-radius:999px;padding:.45rem 1rem!important}
+.nav-link:hover{background:var(--card)}
+.nav-link.active{background:var(--ink);color:var(--paper)!important}
+.navbar-toggler{border-color:var(--line)}
+.navbar-toggler-icon{background-image:none;display:inline-block;width:1.4em;height:1.4em;position:relative}
+.navbar-toggler-icon::before{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:var(--ink);box-shadow:0 -7px 0 var(--ink),0 7px 0 var(--ink)}
+
+/* Banner */
+.banner{position:relative;overflow:hidden;background:var(--navy);color:#fff;border-radius:0 0 28px 28px}
+.banner svg.bg{position:absolute;inset:0;width:100%;height:100%}
+.banner .inner{position:relative;z-index:2}
+.banner h1{font-size:clamp(2.8rem,9vw,6rem);font-weight:800;margin:0}
+.banner .role{font-size:clamp(1.05rem,2.4vw,1.35rem);color:#cfd6ee;max-width:40ch}
+.target{display:inline-block;background:var(--sun);color:#10192b;font-weight:600;border-radius:999px;padding:.25rem 1rem;margin-bottom:1rem}
+.chip{display:inline-block;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.2rem .85rem;font-size:.9rem;margin:0 .35rem .5rem 0;color:#fff}
+.photo{width:min(320px,72vw);aspect-ratio:4/5;margin-inline:auto;border-radius:28px;overflow:hidden;background:#e00000;border:6px solid #fff;box-shadow:14px 14px 0 var(--sun)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+
+/* Tombol */
+.btn-sun{background:var(--sun);color:#10192b;font-weight:600;border:0;border-radius:999px;padding:.7rem 1.5rem}
+.btn-sun:hover{background:#ffd666;color:#10192b}
+.btn-ghost{border:1.5px solid currentColor;color:inherit;border-radius:999px;padding:.7rem 1.5rem;font-weight:500}
+.btn-ghost:hover{background:rgba(255,255,255,.12);color:inherit}
+.btn-ink{background:var(--ink);color:var(--paper);border-radius:999px;padding:.7rem 1.5rem;font-weight:600;border:0}
+.btn-ink:hover{opacity:.88;color:var(--paper)}
+
+/* Konten */
+.page{display:none}
+.page.active{display:block}
+.page-head h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:800}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.5rem}
+.stat{font-family:'Bricolage Grotesque',sans-serif;font-size:2.6rem;font-weight:800;color:var(--accent);line-height:1;margin-bottom:.4rem}
+.stat-label{font-size:.92rem;line-height:1.4}
+
+.skill-row{margin-bottom:1.3rem}
+.skill-row .progress{height:10px;background:var(--line);border-radius:99px}
+.skill-row .progress-bar{background:var(--accent);border-radius:99px}
+.skill-row small{display:block;color:var(--muted);line-height:1.4;margin-top:.35rem}
+.tag{display:inline-block;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:.15rem .65rem;font-size:.88rem;margin:0 .3rem .4rem 0}
+.soft li{margin-bottom:.8rem}
+
+/* Timeline */
+.timeline{position:relative;padding-left:1.8rem;border-left:3px solid var(--line);margin-left:.5rem}
+.t-item{position:relative;margin-bottom:2rem}
+.t-item:last-child{margin-bottom:0}
+.t-item::before{content:"";position:absolute;left:calc(-1.8rem - 10px);top:.45rem;width:17px;height:17px;border-radius:50%;background:var(--sun);border:3px solid var(--accent)}
+.t-date{color:var(--muted);font-size:.92rem}
+.t-item ul{padding-left:1.1rem;margin:.5rem 0 0}
+.t-item li{margin-bottom:.3rem}
+
+.contact-line{display:flex;gap:1rem;align-items:center;padding:.9rem 0;border-bottom:1px solid var(--line);min-width:0}
+.contact-line:last-child{border-bottom:0}
+.contact-line > div:last-child{min-width:0;overflow-wrap:anywhere}
+.contact-line .ic{width:42px;height:42px;border-radius:12px;background:var(--ink);color:var(--paper);display:grid;place-items:center;flex:none;font-weight:700;font-size:.9rem}
+.form-control{background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:.7rem 1rem}
+.form-control:focus{background:var(--paper);color:var(--ink);border-color:var(--accent);box-shadow:0 0 0 .2rem rgba(200,16,46,.2)}
+
+footer{border-top:1px solid var(--line);color:var(--muted);margin-top:auto}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- ============ NAVBAR + LOGO ============ -->
+<nav class="navbar navbar-expand-md site-nav">
+  <div class="container">
+    <a class="brand" href="#beranda" aria-label="Immanuel Sitanggang - Beranda">
+      <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+        <rect width="48" height="48" rx="13" fill="#c8102e"/>
+        <path d="M15 12h18v5h-6.5v14H33v5H15v-5h6.5V17H15z" fill="#fff"/>
+        <circle cx="37" cy="11" r="4.5" fill="#ffc83d"/>
+      </svg>
+      <span>Immanuel Sitanggang</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Buka menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="menu">
+      <ul class="navbar-nav gap-md-1 pt-3 pt-md-0">
+        <li class="nav-item"><a class="nav-link" href="#beranda" data-page="beranda">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tentang" data-page="tentang">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pengalaman" data-page="pengalaman">Pengalaman</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontak" data-page="kontak">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+<!-- ============ HALAMAN 1: BERANDA ============ -->
+<section id="beranda" class="page">
+  <div class="banner py-5">
+    <!-- BANNER -->
+    <svg class="bg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#1e2f66"/><stop offset="1" stop-color="#0d1530"/>
+        </linearGradient>
+        <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#fff" opacity=".16"/></pattern>
+      </defs>
+      <rect width="1200" height="600" fill="url(#g1)"/>
+      <rect width="1200" height="600" fill="url(#dots)"/>
+      <circle cx="1090" cy="70" r="210" fill="#c8102e" opacity=".22"/>
+      <circle cx="1090" cy="70" r="120" fill="#c8102e" opacity=".3"/>
+      <path d="M0 520 Q300 420 600 500 T1200 470 V600 H0Z" fill="#ffc83d" opacity=".95"/>
+      <path d="M0 565 Q320 485 640 555 T1200 535 V600 H0Z" fill="#c8102e"/>
+    </svg>
+    <div class="container inner py-md-4">
+      <div class="row align-items-center g-5">
+        <div class="col-md-7 order-2 order-md-1 pb-4">
+          <span class="target">Target posisi: AI Engineer</span>
+          <h1>Immanuel<br>Sitanggang</h1>
+          <p class="mt-2 mb-2 text-white-50">Biasa dipanggil Nuel</p>
+          <p class="role mt-3">Halo! Saya Immanuel Marojahan Sitanggang, mahasiswa Sistem Informasi yang suka memecahkan masalah lewat logika kode, analisis data, dan solusi digital yang efisien.</p>
+          <div class="mb-4">
+            <span class="chip">Python Programming</span><span class="chip">Data &amp; Business Analytics</span><span class="chip">Web Scraping &amp; APIs</span><span class="chip">Systems &amp; Database Logic</span><span class="chip">E-Commerce Logistics</span>
+          </div>
+          <a href="#pengalaman" class="btn btn-sun me-2 mb-2">Lihat pengalaman</a>
+          <a href="#kontak" class="btn btn-ghost mb-2">Hubungi saya</a>
+        </div>
+        <div class="col-md-5 order-1 order-md-2">
+          <!-- FOTO: pastikan file foto.diri.jpg ada di folder yang sama dengan index.html -->
+          <div class="photo">
+            <img src="foto.diri.jpg" alt="Foto Immanuel Marojahan Sitanggang">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <div class="row g-3">
+      <div class="col-6 col-lg-3"><div class="panel h-100"><div class="stat">3+</div><div class="stat-label text-muted-2">Bahasa pemrograman utama (Python, C, Java)</div></div></div>
+      <div class="col-6 col-lg-3"><div class="panel h-100"><div class="stat">5+</div><div class="stat-label text-muted-2">Proyek tech &amp; digital terlaksana (E-Commerce Automation, Web System, Data Analytics)</div></div></div>
+      <div class="col-6 col-lg-3"><div class="panel h-100"><div class="stat">2</div><div class="stat-label text-muted-2">Platform e-commerce &amp; logistik dikelola (Shopee &amp; JNE Drop Point)</div></div></div>
+      <div class="col-6 col-lg-3"><div class="panel h-100"><div class="stat">1</div><div class="stat-label text-muted-2">Program skill AI/Python skala nasional (Coding Camp DBS Foundation)</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HALAMAN 2: TENTANG ============ -->
+<section id="tentang" class="page">
+  <div class="container py-5">
+    <div class="page-head mb-4"><h2>Tentang saya</h2></div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="panel h-100">
+          <p>Saya Immanuel Marojahan Sitanggang, mahasiswa Sistem Informasi di Universitas Budi Luhur dengan pengalaman praktis di dunia teknologi dan operasional bisnis retail maupun e-commerce. Latar belakang saya terbentuk dari pemahaman akademis di bidang pengembangan sistem dan pengalaman lapangan dalam mengelola penjualan dan logistik.</p>
+          <p>Saya tertarik pada analisis data, pemrograman Python, otomasi sistem, dan eksplorasi kecerdasan buatan (Artificial Intelligence). Saya senang mendalami bagaimana logika kode dan data bisa memecahkan masalah nyata, mulai dari merancang aplikasi manajemen inventaris sampai membangun skrip otomatisasi yang efisien.</p>
+          <p>Nilai utama yang saya pegang adalah integritas, ketekunan, dan semangat belajar terus-menerus. Saya percaya setiap tantangan teknis maupun operasional selalu punya solusi jika dihadapi dengan pemikiran analitis, kemauan bereksperimen, dan komitmen memberikan hasil terbaik.</p>
+          <h4 class="mt-4 mb-3 fs-5">Data diri</h4>
+          <dl class="row mb-0">
+            <dt class="col-sm-4">Tempat, tanggal lahir</dt><dd class="col-sm-8">Jakarta, 3 Januari 2007</dd>
+            <dt class="col-sm-4">Domisili</dt><dd class="col-sm-8">Jakarta Selatan</dd>
+            <dt class="col-sm-4">Pendidikan</dt><dd class="col-sm-8">Sistem Informasi, Universitas Budi Luhur (2025 – sekarang)</dd>
+            <dt class="col-sm-4">Bahasa</dt><dd class="col-sm-8">Indonesia (native), Inggris (menengah)</dd>
+            <dt class="col-sm-4">Hobi</dt><dd class="col-sm-8">Berjualan</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="panel h-100">
+          <h4 class="fs-5 mb-3">Keahlian teknis</h4>
+          <div class="skill-row"><div class="d-flex justify-content-between"><strong>Python Programming</strong><span>85%</span></div><div class="progress"><div class="progress-bar" style="width:85%"></div></div><small>Skrip otomasi, web scraping, pengolahan data, hingga logika aplikasi dasar.</small></div>
+          <div class="skill-row"><div class="d-flex justify-content-between"><strong>Systems &amp; Database Logic</strong><span>80%</span></div><div class="progress"><div class="progress-bar" style="width:80%"></div></div><small>Alur sistem, logika algoritma BFS, struktur data, dan perancangan database.</small></div>
+          <div class="skill-row"><div class="d-flex justify-content-between"><strong>Data Analytics &amp; Mining</strong><span>75%</span></div><div class="progress"><div class="progress-bar" style="width:75%"></div></div><small>Visualisasi data, pemodelan decision tree, dan analisis dataset.</small></div>
+          <div class="skill-row"><div class="d-flex justify-content-between"><strong>Multi-Language Coding (C &amp; Java)</strong><span>70%</span></div><div class="progress"><div class="progress-bar" style="width:70%"></div></div><small>Sintaksis dasar, penelusuran trace table C, dan program Object-Oriented Java.</small></div>
+          <div class="skill-row mb-0"><div class="d-flex justify-content-between"><strong>Web Development (HTML &amp; APIs)</strong><span>70%</span></div><div class="progress"><div class="progress-bar" style="width:70%"></div></div><small>Struktur web dasar, inspeksi request API dan network logs, serta integrasi payload digital.</small></div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="panel">
+          <h4 class="fs-5 mb-3">Soft skill</h4>
+          <ul class="soft list-unstyled row row-cols-1 row-cols-md-2 mb-0">
+            <li class="col"><strong>Logical &amp; Analytical Thinking.</strong> Kuat membedah masalah kompleks menjadi langkah terstruktur, baik saat merumuskan logika algoritma (seperti BFS) maupun melacak bug teknis.</li>
+            <li class="col"><strong>Problem Solving.</strong> Terbiasa mencari solusi alternatif secara mandiri saat menghadapi kendala teknis, sistem digital, atau operasional lapangan.</li>
+            <li class="col"><strong>Adaptabilitas &amp; belajar cepat.</strong> Cepat menguasai tools, bahasa pemrograman, dan alur kerja baru sesuai kebutuhan proyek atau mata kuliah.</li>
+            <li class="col"><strong>Manajemen operasional &amp; logistik.</strong> Teliti dalam mengelola transaksi e-commerce, proses pengiriman paket, hingga koordinasi layanan pelanggan.</li>
+            <li class="col"><strong>Komunikasi &amp; bimbingan.</strong> Terbiasa menyusun pesan, dokumentasi, dan konsultasi secara terstruktur, santun, dan jelas untuk keperluan akademik maupun profesional.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HALAMAN 3: PENGALAMAN ============ -->
+<section id="pengalaman" class="page">
+  <div class="container py-5">
+    <div class="page-head mb-5"><h2>Pengalaman &amp; pendidikan</h2></div>
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <h4 class="fs-5 mb-4">Pengalaman kerja</h4>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-date">2026</div>
+            <h5 class="fw-bold mb-0">Admin Intern</h5>
+            <div class="text-muted-2">PT Unilab Perdana</div>
+            <ul>
+              <li>Menginput data hasil uji laboratorium menggunakan Microsoft Office.</li>
+              <li>Mengarsipkan dan memindai dokumen pengajuan sampel secara rapi dan sistematis.</li>
+              <li>Menyusun dan menomori laporan hasil uji menggunakan Microsoft Excel.</li>
+            </ul>
+          </div>
+          <div class="t-item">
+            <div class="t-date">2025</div>
+            <h5 class="fw-bold mb-0">Customer Service</h5>
+            <div class="text-muted-2">PT Hero</div>
+            <ul>
+              <li>Menemukan akar masalah pelanggan dan memberi solusi tepat pada kontak pertama (First Call Resolution) untuk menjaga kepuasan pelanggan.</li>
+              <li>Memastikan setiap kebutuhan dan pertanyaan pelanggan dijawab dengan jelas, akurat, dan profesional.</li>
+            </ul>
+          </div>
+          <div class="t-item">
+            <div class="t-date">2025</div>
+            <h5 class="fw-bold mb-0">Admin</h5>
+            <div class="text-muted-2">PT Lotte Mart Grosir</div>
+            <ul>
+              <li>Mengelola dan menganalisis data stok: mengecek ketersediaan produk di area penjualan, lalu mencatat dan melaporkan barang yang menipis atau habis.</li>
+              <li>Membantu pelanggan dengan informasi dasar produk Fresh Food.</li>
+              <li>Menerima dan menata barang dengan prinsip FIFO (First In, First Out) agar kualitas dan kesegaran produk terjaga.</li>
+            </ul>
+          </div>
+          <div class="t-item">
+            <h5 class="fw-bold mb-0">Financial Consultant</h5>
+            <div class="text-muted-2">PT Scorex Teknologi Indonesia</div>
+            <ul>
+              <li>Menganalisis kebutuhan finansial dan profil risiko klien.</li>
+              <li>Menyusun rekomendasi produk keuangan sesuai kebutuhan dan tujuan klien.</li>
+              <li>Membangun hubungan dengan klien dan melakukan tindak lanjut layanan secara berkala.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <h4 class="fs-5 mb-4">Pendidikan &amp; program</h4>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-date">September 2025 – sekarang</div>
+            <h5 class="fw-bold mb-0">Sistem Informasi</h5>
+            <div class="text-muted-2">Universitas Budi Luhur</div>
+            <p class="mb-0 mt-2">Mata kuliah: Algoritma dan Pemrograman, Sistem Basis Data, Analisis dan Perancangan Sistem, Pemrograman Web, Manajemen Sistem Informasi, Business Intelligence, dan lainnya.</p>
+          </div>
+          <div class="t-item">
+            <div class="t-date">Juli 2022 – Maret 2025</div>
+            <h5 class="fw-bold mb-0">Bisnis Retail dan Pemasaran</h5>
+            <div class="text-muted-2">SMKN 59 Jakarta</div>
+            <p class="mb-0 mt-2">Mata kuliah relevan: Strategi Pemasaran, Manajemen Keuangan, Analisis Data Bisnis, Kewirausahaan, dan Inovasi Bisnis.</p>
+          </div>
+          <div class="t-item">
+            <h5 class="fw-bold mb-0">Coding Camp powered by DBS Foundation</h5>
+            <div class="text-muted-2">Program skill AI/Python skala nasional</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HALAMAN 4: KONTAK ============ -->
+<section id="kontak" class="page">
+  <div class="container py-5">
+    <div class="page-head mb-4"><h2>Mari terhubung</h2><p class="text-muted-2 mb-0">Punya peluang magang, proyek, atau ingin berdiskusi? Kirim pesan, saya balas secepatnya.</p></div>
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="panel">
+          <div class="contact-line"><div class="ic">@</div><div><div class="text-muted-2 small">Email</div><a href="mailto:immanuelmarojahansitanggang@gmail.com">immanuelmarojahansitanggang@gmail.com</a></div></div>
+          <div class="contact-line"><div class="ic">WA</div><div><div class="text-muted-2 small">WhatsApp</div><a href="https://wa.me/6285693697608" target="_blank" rel="noopener">0856-9369-7608</a></div></div>
+          <div class="contact-line"><div class="ic">in</div><div><div class="text-muted-2 small">LinkedIn</div><a href="https://www.linkedin.com/in/immanuel-sitanggang-34ba672b5" target="_blank" rel="noopener">Immanuel Sitanggang</a></div></div>
+          <div class="contact-line"><div class="ic">IG</div><div><div class="text-muted-2 small">Instagram</div><a href="https://www.instagram.com/immanuell.stg" target="_blank" rel="noopener">@immanuell.stg</a></div></div>
+          <div class="contact-line"><div class="ic">⌖</div><div><div class="text-muted-2 small">Lokasi</div>Jakarta Selatan</div></div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="panel">
+          <div class="row g-3">
+            <div class="col-sm-6"><label class="form-label" for="f-nama">Nama</label><input id="f-nama" class="form-control" type="text" autocomplete="name"></div>
+            <div class="col-sm-6"><label class="form-label" for="f-email">Email</label><input id="f-email" class="form-control" type="email" autocomplete="email"></div>
+            <div class="col-12"><label class="form-label" for="f-pesan">Pesan</label><textarea id="f-pesan" class="form-control" rows="5"></textarea></div>
+            <div class="col-12"><button type="button" id="kirim" class="btn btn-ink">Kirim lewat email</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="py-4">
+  <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2 small">
+    <span>© <span id="thn"></span> Immanuel Marojahan Sitanggang</span>
+    <span>Dibuat dengan HTML, CSS, dan Bootstrap 5</span>
+  </div>
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+(function(){
+  var pages = ['beranda','tentang','pengalaman','kontak'];
+  function show(){
+    var id = (location.hash || '#beranda').slice(1);
+    if (pages.indexOf(id) < 0) id = 'beranda';
+    pages.forEach(function(p){ document.getElementById(p).classList.toggle('active', p === id); });
+    document.querySelectorAll('.nav-link').forEach(function(a){
+      var on = a.dataset.page === id;
+      a.classList.toggle('active', on);
+      if (on) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
+    var menu = document.getElementById('menu');
+    if (menu.classList.contains('show') && window.bootstrap) bootstrap.Collapse.getOrCreateInstance(menu).hide();
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange', show);
+  show();
+
+  document.getElementById('thn').textContent = new Date().getFullYear();
+
+  document.getElementById('kirim').addEventListener('click', function(){
+    var n = document.getElementById('f-nama').value, e = document.getElementById('f-email').value, p = document.getElementById('f-pesan').value;
+    location.href = 'mailto:immanuelmarojahansitanggang@gmail.com?subject=' + encodeURIComponent('Pesan dari website CV') +
+      '&body=' + encodeURIComponent(p + '\n\nDari: ' + n + ' (' + e + ')');
+  });
+
+  function theme(){
+    var t = document.documentElement.getAttribute('data-theme');
+    var dark = t ? t === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
+  }
+  theme();
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', theme);
+  new MutationObserver(theme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+})();
+</script>
+</body>
+</html>
